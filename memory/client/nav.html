@@ -1,0 +1,35 @@
+<template name="nav">
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Memory Whatever</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Personalization
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Quiz 1</a></li>
+            <li><a href="#">Quiz 2</a></li>
+            <li><a href="#">Quiz 3</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Memory Tests
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Game 1</a></li>
+            <li><a href="#">Game 2</a></li>
+            <li><a href="#">Game 3</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Articles</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">{{> loginButtons align="right"}}</a></li>
+      </ul>
+    </div>
+  </nav>
+</template>
