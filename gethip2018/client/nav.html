@@ -1,0 +1,29 @@
+<template name="nav">
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="{{pathFor route = 'home'}}">FitHelp</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        {{#if currentUser}}
+        <li><a href="{{pathFor route = 'profile'}}">Profile</a></li>
+        <li><a href="{{pathFor route = 'addex'}}">Track</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Groups
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="{{pathFor route = 'mygroups'}}">My Groups</a></li>
+            <li><a href="{{pathFor route = 'allgroups'}}">All Groups</a></li>
+          </ul>
+        </li>
+        <li><a href="{{pathFor route = 'leaderboard'}}">Leaderboard</a></li>
+      </ul>
+      {{/if}}
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="{{pathFor route = 'about'}}">About</a></li>
+        <li><a href="#">{{> loginButtons align="right"}}</a></li>
+      </ul>
+    </div>
+  </nav>
+</template>
